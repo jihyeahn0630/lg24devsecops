@@ -43,6 +43,11 @@ jobs:
           # Path to the python source code you want to type check. If you want to type check the root of your repo, use './'. A .pyre_configuration file should exist here, if not, a default configuration will be used.
           repo-directory: './'
           requirements-path: './requirements.txt'
-       
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: my-artifact
+          path: build-output/
      
 
